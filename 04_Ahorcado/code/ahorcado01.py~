@@ -1,0 +1,27 @@
+try:
+    import tkinter
+except:
+    import Tkinter as tkinter
+    
+ancho = 365
+alto = 200
+
+ventana = tkinter.Tk()
+ventana.title("Juego del ahorcado")
+#ventana.minsize(ancho, alto)
+
+imagen = tkinter.PhotoImage(file = 'img7.png')
+canvas = tkinter.Canvas(ventana, width=ancho, height=alto)
+canvas.create_image(0,0,image=imagen,anchor=tkinter.NW)
+canvas.pack()
+
+texto = tkinter.Label(text = 'PALABRA', anchor=tkinter.NW)
+texto.pack()
+
+entry = tkinter.Entry()
+entry.pack()
+
+boton = tkinter.Button(text = 'OK')
+boton.pack()
+
+ventana.mainloop()
